@@ -16,6 +16,7 @@ int main(void)
 	for (car = 0; car < 10; car++)
 	{
 		putchar(car + '0');
+		if (car < 9)
 		putchar(',');
 		putchar(' ');
 	}
