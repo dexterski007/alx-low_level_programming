@@ -26,7 +26,7 @@ int main(void)
 
 	if (last == 0)
 	{
-		printf("zero \n");
+		printf("0\n");
 	}
 	else if (last < 6 && last != 0)
 	{
