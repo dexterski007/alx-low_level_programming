@@ -21,7 +21,7 @@ int main(void)
 	{
 		putchar(car + '0');
 		putchar(car2 + '0');
-	
+
 		if (car != 8 || car2 != 9)
 	{
 		putchar(',');
