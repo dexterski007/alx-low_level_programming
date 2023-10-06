@@ -30,7 +30,6 @@ int main(void)
 						putchar(' ');
 						putchar(car3 + '0');
 						putchar(car4 + '0');
-					
 
 		if (!(car == 9 && car2 == 8 && car3 == 9 && car4 == 8))
 		{
