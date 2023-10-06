@@ -16,13 +16,13 @@ int main(void)
 
 	for (car = 0; car < 100; car++)
 	{
-		for (car2 = car + 1 ; car2 < 100; car2++)
-		{
-					putchar((car / 10) + '0');
-					putchar((car % 10) + '0');
-					putchar(' ');
-					putchar((car2 / 10) + '0');
-					putchar((car2 % 10) + '0');
+	for (car2 = car + 1 ; car2 < 100; car2++)
+	{
+	putchar((car / 10) + '0');
+	putchar((car % 10) + '0');
+	putchar(' ');
+	putchar((car2 / 10) + '0');
+	putchar((car2 % 10) + '0');
 
 		if (car != 98 || car2 != 99)
 		{
