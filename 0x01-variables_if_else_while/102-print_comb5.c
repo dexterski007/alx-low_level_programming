@@ -14,9 +14,9 @@ int main(void)
 	int car;
 	int car2;
 
-	for (car = 0; car < 99; car++)
+	for (car = 0; car < 100; car++)
 	{
-		for (car2 = car + 1 ; car2 < 99; car2++)
+		for (car2 = car + 1 ; car2 < 100; car2++)
 		{
 					putchar((car / 10) + '0');
 					putchar((car % 10) + '0');
