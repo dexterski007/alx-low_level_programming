@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_alphabet - functions and nested
  *
@@ -15,7 +14,7 @@ void print_alphabet(void)
 	char lett;
 
 	for (lett = 'a'; lett <= 'z' ; lett++)
-	putchar(lett);
+	_putchar(lett);
 
-	putchar('\n');
+	_putchar('\n');
 }
