@@ -1,14 +1,15 @@
 #include "main.h"
+
 /**
- * _print_sign - functions and nested
+ * print_sign - prints the sign of a number
+ * @n: The number to check
  *
- * @n: this parameter is ok
+ * Description:
+ * This function checks the sign of the number 'n' and prints the corresponding
+ * sign character. It returns 1 for positive numbers, -1 for negative numbers,
+ * and 0 for zero.
  *
- * Description - functionsalphabet is lower parameter 'c' is actually cool
- *
- * Return: always 0 or 1
- *
- *
+ * Return: 1 if 'n' is positive, -1 if 'n' is negative, 0 if 'n' is zero.
  */
 
 int print_sign(int n)
@@ -18,9 +19,9 @@ int print_sign(int n)
 		_putchar('+');
 		return (1);
 	}
-	elseif (n < 0)
+	else if (n < 0)
 	{
-		_putchar ('-');
+		_putchar('-');
 		return (-1);
 	}
 	else
