@@ -10,7 +10,7 @@
  *
  */
 
-void print_alphabet(void){
+void print_alphabet(){
 	char lett;
 
 	for (lett = 'a'; lett <= 'z' ; lett++) {
