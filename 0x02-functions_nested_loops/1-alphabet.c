@@ -10,15 +10,13 @@
  *
  */
 
-void print_alphabet(void);
+void print_alphabet(void){
+	char lett;
 
-int main(void)
-{
-	int a;
-
-	for (a = 0; a < 26 ; a++) {
+	for (lett = 'a'; lett <= 'z' ; lett++) {
 		print_alphabet();
 		 }
-
+	putchar('\n');
+}
 	return (0);
 }
