@@ -13,10 +13,14 @@
 
 int _islower(int c)
 {
-	int c;
+	int lett;
 
-	if (c >= 97 && <= 122)
+	if (lett >= 97 && <= 122)
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
