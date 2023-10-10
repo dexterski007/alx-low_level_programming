@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - functions and nested
+ * print_alphabet - functions and nested
  *
  * Description - functionsalphabet
  *
@@ -10,13 +10,14 @@
  *
  */
 
-void print_alphabet(){
+void print_alphabet(void)
+{
 	char lett;
 
-	for (lett = 'a'; lett <= 'z' ; lett++) {
+	for (lett = 'a'; lett <= 'z' ; lett++)
 		print_alphabet();
-		 }
-	putchar('\n');
 }
+	putchar('\n');
+
 	return (0);
 }
