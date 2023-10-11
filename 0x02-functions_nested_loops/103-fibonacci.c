@@ -29,7 +29,7 @@ int main(void)
 	}
 	n++;
 	}
-	printf("%ld", curr);
+	printf("%ld\n", curr);
 
 return (0);
 }
