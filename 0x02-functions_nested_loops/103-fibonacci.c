@@ -28,7 +28,8 @@ int main(void)
 	curr = next;
 	}
 	n++;
+	}
 	printf("%ld", curr);
-}
+
 return (0);
 }
