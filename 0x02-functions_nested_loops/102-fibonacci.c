@@ -12,7 +12,7 @@
 int main(void)
 {
 	int n;
-	long long prev, curr, next;
+	long prev, curr, next;
 
 	prev = 1;
 	curr = 1;
