@@ -11,8 +11,7 @@
 
 int main(void)
 {
-	int n;
-	long prev, curr, next;
+	long prev, curr, next, n;
 
 	prev = 1;
 	curr = 2;
@@ -23,13 +22,13 @@ int main(void)
 	{
 	if (curr % 2 == 0)
 	{
+		n += curr;
+	}
 	next = prev + curr;
 	prev = curr;
 	curr = next;
 	}
-	++n;
-	}
-	printf("%ld\n", curr);
+	printf("%ld\n", n);
 
 return (0);
 }
