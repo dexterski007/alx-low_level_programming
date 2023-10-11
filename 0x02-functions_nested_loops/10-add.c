@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * int_add - prints the sign of a number
+ * add - prints the sign of a number
  *
- * @int: hey jude
- * Description:
- * This function checks the sign of the number 'n' and prints the corresponding
+ * @a: hey jude
+ *
+ * @b: hey john
+ * Description: This function checks the sign of
+ * the number 'n' and prints the corresponding
  * sign character. It returns 1 for positive numbers, -1 for negative numbers,
  * and 0 for zero.
  *
