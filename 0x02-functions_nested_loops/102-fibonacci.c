@@ -20,7 +20,7 @@ int main(void)
 {
 	sum = sum + sum;
 	printf("%d, ", sum);
-	n++
+	n++;
 	}
 printf("\n");
 
