@@ -19,7 +19,7 @@ int main(void)
 	next = 0;
 	n = 0;
 
-	while (n < 100 && curr <= 4000000)
+	while (curr < 4000000)
 	{
 	if (curr % 2 == 0)
 	{
@@ -27,7 +27,7 @@ int main(void)
 	prev = curr;
 	curr = next;
 	}
-	n++;
+	++n;
 	}
 	printf("%ld\n", curr);
 
