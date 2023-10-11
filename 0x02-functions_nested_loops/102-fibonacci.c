@@ -11,10 +11,11 @@
 
 int main(void)
 {
-	int n, sum, prev, curr;
+	int n, sum, prev, curr, next;
 
 	prev = 1;
 	curr = 1;
+	next = 0;
 	n = 0;
 
 	while (n < 50)
@@ -27,8 +28,7 @@ int main(void)
 	{
 		printf("%d\n", curr);
 	}
-	int next = prev + curr;
-
+	next = prev + curr;
 	prev = curr;
 	curr = next;
 	n++;
