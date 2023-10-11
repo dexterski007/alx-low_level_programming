@@ -12,7 +12,7 @@
  * Return: 1 if 'n' is positive, -1 if 'n' is negative, 0 if 'n' is zero.
  */
 
-int int_add(int a, int b)
+int add(int a, int b)
 {
 	int c;
 
