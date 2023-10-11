@@ -23,19 +23,12 @@ int main(void)
 	{
 	if (curr % 2 == 0)
 	{
-	if (n < 99)
-	{
-		printf("%ld, ", curr);
-	}
-	else
-	{
-		printf("%ld\n", curr);
-	}
-	}
 	next = prev + curr;
 	prev = curr;
 	curr = next;
+	}
 	n++;
+	printf("%ld", curr);
 }
 return (0);
 }
