@@ -11,7 +11,8 @@
 
 int main(void)
 {
-	int n, prev, curr, next;
+	int n;
+	long long prev, curr, next;
 
 	prev = 1;
 	curr = 1;
