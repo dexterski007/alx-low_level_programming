@@ -14,16 +14,16 @@ int main(void)
 	int n;
 	long prev, curr, next;
 
-	prev = 2;
-	curr = 8;
+	prev = 1;
+	curr = 2;
 	next = 0;
 	n = 0;
 
-	while (n < 100)
-{
-	while (curr < 4000000)
+	while (n < 100 && curr < 4000000)
 	{
-	if (curr < 4000000)
+	if (curr % 2 == 0)
+	{
+	if (n < 99)
 	{
 		printf("%ld, ", curr);
 	}
@@ -31,14 +31,11 @@ int main(void)
 	{
 		printf("%ld\n", curr);
 	}
+	}
 	next = prev + curr;
-	if ((next % 2) == 0)
-	{
 	prev = curr;
 	curr = next;
-	}
 	n++;
-	}
 }
 return (0);
 }
