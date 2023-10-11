@@ -21,6 +21,8 @@ int main(void)
 
 	while (n < 100)
 {
+	while (curr < 4000000)
+	{
 	if (curr < 4000000)
 	{
 		printf("%ld, ", curr);
@@ -37,5 +39,6 @@ int main(void)
 	}
 	n++;
 	}
+}
 return (0);
 }
