@@ -23,11 +23,11 @@ int main(void)
 {
 	if (n < 49)
 	{
-		printf("%d, ", curr);
+		printf("%ld, ", curr);
 	}
 	else
 	{
-		printf("%d\n", curr);
+		printf("%ld\n", curr);
 	}
 	next = prev + curr;
 	prev = curr;
