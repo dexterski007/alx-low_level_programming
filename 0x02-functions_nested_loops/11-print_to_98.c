@@ -14,9 +14,9 @@
  * Return: 1 if 'n' is positive, -1 if 'n' is negative, 0 if 'n' is zero.
  */
 
-int print_to_98(int n)
+void print_to_98(int n)
 {
-	for (n <= 98)
+	for (n <= 98; n++)
 	{
 		if (n < 98)
 		{
@@ -27,5 +27,4 @@ int print_to_98(int n)
 			printf("%d", n);
 		}
 	}
-	return (0);
 }
