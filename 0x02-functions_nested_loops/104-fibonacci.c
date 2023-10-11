@@ -16,7 +16,7 @@ int main(void)
 
 	printf("%lu, %lu, ", a, b);
 
-	for (count = 2; count < 96; count++)
+	for (count = 2; count < 92; count++)
 	{
 	c = a + b;
 	printf("%lu, ", c);
@@ -28,7 +28,7 @@ int main(void)
 		a2 = a % 10000000000;
 		b1 = b / 10000000000;
 		b2 = b % 10000000000;
-	for (count = 96; count < 99; count++)
+	for (count = 93; count < 99; count++)
 	{
 		c1 = a1 + b1;
 		c2 = a2 + b2;
@@ -37,7 +37,7 @@ int main(void)
 			c1 = c1 + 1;
 			c2 = c2 % 100000000000;
 		}
-		printf("%lu%010lu", c1, c2);
+		printf("%lu%lu", c1, c2);
 		if (count < 98)
 		printf(", ");
 		a1 = b1;
