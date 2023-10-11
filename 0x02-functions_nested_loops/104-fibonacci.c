@@ -32,12 +32,12 @@ int main(void)
 	{
 		c1 = a1 + b1;
 		c2 = a2 + b2;
-		if (a2 + b2 > 9999999999)
+		if (c2 > 9999999999)
 		{
 			c1 = c1 + 1;
 			c2 = c2 % 100000000000;
 		}
-		printf("%lu%lu", c1, c2);
+		printf("%lu%010lu", c1, c2);
 		if (count < 98)
 		printf(", ");
 		a1 = b1;
