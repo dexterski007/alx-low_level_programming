@@ -35,7 +35,7 @@ int main(void)
 		if (c2 > 9999999999)
 		{
 			c1 = c1 + 1;
-			c2 = c2 % 100000000000;
+			c2 = c2 % 10000000000;
 		}
 		printf("%lu%lu", c1, c2);
 		if (count < 98)
