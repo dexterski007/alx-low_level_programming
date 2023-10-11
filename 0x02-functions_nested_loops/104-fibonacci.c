@@ -10,26 +10,26 @@
  */
 int main(void)
 {
-    unsigned long int a = 1, b = 2, c;
-    int count;
+	unsigned long int a = 1, b = 2, c;
+	int count;
 
-    printf("%lu, %lu, ", a, b);
+	printf("%lu, %lu, ", a, b);
 
-    for (count = 2; count < 98; count++)
-    {
-        c = a + b;
-        if (count < 97)
-        {
-            printf("%lu, ", c);
-        }
-        else
-        {
-            printf("%lu\n", c);
-        }
+	for (count = 2; count < 98; count++)
+	{
+	c = a + b;
+	if (count < 97)
+	{
+	printf("%lu, ", c);
+	}
+	else
+	{
+	printf("%lu\n", c);
+	}
 
-        a = b;
-        b = c;
-    }
+	a = b;
+	b = c;
+	}
 
-    return (0);
+	return (0);
 }
