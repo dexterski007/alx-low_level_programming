@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * print_square - checks if it is upper.
+ * print_triangle - cheer.
  *
  * @size: yeah
  * Return: multi
  *
  */
 
-void print_square(int size)
+void print_triangle(int size)
 {
-	int t, s;
+	int t, s, x;
 
 	if (size <= 0)
 	{
@@ -18,9 +18,13 @@ void print_square(int size)
 	}
 	else
 	{
-	for (s = size; s > 0; s--)
+	for (s = 0; s < size; s++)
 	{
-	for (t = size; t > 0; t--)
+	for (t = size - s; t > 1; t--)
+	{
+	_putchar(' ');
+	}
+	for (x = 0; x <= s; x++)
 	{
 	_putchar('#');
 	}
