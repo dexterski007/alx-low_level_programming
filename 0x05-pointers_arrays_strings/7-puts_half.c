@@ -9,8 +9,8 @@
 
 void puts_half(char *str)
 {
-	int a = 0;
-	int b = 0;
+	unsigned int a = 0;
+	unsigned int b = 0;
 
 	while (str[a] != '\0')
 	{
