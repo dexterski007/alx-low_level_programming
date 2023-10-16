@@ -1,0 +1,20 @@
+#include "_putchar.c"
+
+/**
+ * _puts - check the code
+ *
+ * @str: yeah science
+ * Return: void.
+ */
+
+void _puts(char *str)
+{
+	char t[*str];
+	int l = 0;
+
+	while (*str != '\0')
+	{
+	_putchar(t[*str + l]);
+	l++;
+	}
+}
