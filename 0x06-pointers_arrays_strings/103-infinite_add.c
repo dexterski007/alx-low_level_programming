@@ -11,7 +11,7 @@ void reverse_array(char *str)
 	int k = 0;
 	int l = 0;
 	char temp;
-	
+
 	while (str[k] != '\0')
 	k++;
 	k--;
