@@ -16,13 +16,11 @@ void reverse_array(char *str)
 	k++;
 	k--;
 
-	while (k > 0)
+	for (l = 0; l < k; l++, k--)
 	{
 	temp = str[k];
 	str[k] = str[l];
 	str[l] = temp;
-	k--;
-	l++;
 	}
 }
 
@@ -67,9 +65,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	sum = dig1 + dig2 + carry;
 	carry = sum / 10;
 	if (s >= (size_r - 1))
-	{
 	return (0);
-	}
 	res1 = sum % 10;
 	r[s] = (res1 + '0');
 	s++;
