@@ -65,7 +65,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	else
 	dig2 = (n2[j] - '0');
 	sum = dig1 + dig2 + carry;
-	carry = sum / 10;
+	if (sum >= 10)
+	carry = 1;
+	else
+	carry = 0;
 	if (s >= (size_r - 1))
 	{
 	return (0);
