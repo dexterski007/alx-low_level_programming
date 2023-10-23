@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 
 /**
  * _strchr - string search
@@ -13,12 +13,12 @@
 char *_strchr(char *s, char c)
 
 {
-	int i;
+	int n;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (n = 0; s[n] >= '\0'; n++)
 	{
-		if (s[i] == c)
-		return (s + i);
+		if (s[n] == c)
+		return (s + n);
 	}
 	return (NULL);
 }
