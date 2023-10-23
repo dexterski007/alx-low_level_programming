@@ -1,0 +1,28 @@
+#include "main.h"
+
+/**
+ * _strspn - string search
+ *
+ * @accept: number of
+ * @s: segment
+ *
+ * Return: location
+**/
+
+unsigned int _strspn(char *s, char *accept)
+
+{
+	unsigned int i;
+	unsigned int j;
+	unsigned int c;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			c++;
+		}
+	}
+	return (c);
+}
