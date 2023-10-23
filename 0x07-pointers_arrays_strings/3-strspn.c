@@ -12,10 +12,10 @@
 unsigned int _strspn(char *s, char *accept)
 
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int c = 0;
-	unsigned int f = 0;
+	int i;
+	int j;
+	int c = 0;
+	int f = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -31,5 +31,5 @@ unsigned int _strspn(char *s, char *accept)
 		if (f == 0)
 		return (f);
 	}
-	return (c);
+	return (0);
 }
