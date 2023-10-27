@@ -1,0 +1,1 @@
+Statics are immovable!
