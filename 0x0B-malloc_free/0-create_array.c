@@ -6,6 +6,7 @@
  * @size: size
  * @c: character
  *
+ * Return: char
 **/
 
 char *create_array(unsigned int size, char c)
@@ -15,11 +16,11 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 
 	if (size == 0)
-	return NULL;
+	return (NULL);
 
 	tab = (char *)malloc(size * sizeof(char));
 	if (tab == NULL)
-	return NULL;
+	return (NULL);
 	else
 	{
 	for (i = 0; i < size; i++)
