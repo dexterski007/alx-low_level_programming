@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup is to duplicate
+ * _strdup - is to duplicate
  *
  * @str: string
  *
@@ -22,10 +22,12 @@ char *_strdup(char *str)
 
 	i++;
 	tab = (char *)malloc(i);
+	if tab == NULL;
+	return (NULL);
 
 	i++;
 	for (j = 0; j < i; j++)
 	tab[j] = str[j];
-	
+
 	return (tab);
 }
