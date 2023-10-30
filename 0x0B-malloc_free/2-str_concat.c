@@ -26,11 +26,10 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j] != '\0')
 	j++;
 
-	i++;
 	d = i + j;
 	j = 0;
 
-	tab = (char *)malloc(d);
+	tab = (char *)malloc(d + 1);
 	if (tab == NULL)
 	return (NULL);
 
