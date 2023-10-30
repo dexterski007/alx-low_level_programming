@@ -12,37 +12,37 @@
 char *str_concat(char *s1, char *s2)
 
 {
-	char *tab, *p1, *p2;
+	char *tab;
 	int i = 0, j = 0, c = 0, d = 0;
 
 	if (s1 == NULL)
-	p1 = "";
-	else p1 = s1;
+	s1 = "";
 	if (s2 == NULL)
-	p2 = "";
-	else p2 = s2;
+	s2 = "";
 
-	while (p1[i] != '\0')
+	while (s1[i] != '\0')
 	i++;
 
-	while (p2[j] != '\0')
+	while (s2[j] != '\0')
 	j++;
 
-	tab = (char *)malloc(i + j + 1);
+	i++;
+	d = i + j;
+	j = 0;
+
+	tab = (char *)malloc(d);
 	if (tab == NULL)
 	return (NULL);
 
-	i++;
-	j += i;
-	
-	for (c = 0; c < i; c++)
-	tab[c] = p1[c];
-	
-	while (p2[d] != '\0')
+	for (c = 0; c < d; c++)
 	{
-	tab[c] = p2[d];
-	c++;
-	d++;
+	if (c < i)
+	tab[c] = s1[c];
+	if (c >= i)
+	{
+	tab[c] = s2[j];
+	j++;
+	}
 	}
 	tab[c] = '\0';
 	return (tab);
