@@ -79,7 +79,7 @@ char **strtow(char *str)
 	}
 	}
 	tab[d] = NULL;
-	if tab = NULL;
+	if (tab == NULL)
 	return (NULL);
 	return (tab);
 }
