@@ -71,7 +71,10 @@ char **strtow(char *str)
 		}
 			tab[d] = (char *)malloc(j + 1);
 			if (tab[d] == NULL)
+			{
+			free(tab[d]);
 			return (NULL);
+			}
 			for (f = 0; f < j; f++)
 			tab[d][f] = str[i - j + f];
 			tab[d][j] = '\0';
@@ -79,7 +82,5 @@ char **strtow(char *str)
 	}
 	}
 	tab[d] = NULL;
-	if (tab == NULL)
-	return (NULL);
 	return (tab);
 }
