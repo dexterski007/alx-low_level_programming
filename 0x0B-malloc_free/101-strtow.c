@@ -55,6 +55,8 @@ char **strtow(char *str)
 	return (NULL);
 
 	d = counter(str);
+	if (d == 0)
+	return (NULL);
 	tab = (char **)malloc((d + 1) * sizeof(char *));
 	if (tab == NULL)
 	return (NULL);
