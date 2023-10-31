@@ -51,7 +51,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, d = 0, f = 0;
 	int len = strlen(str);
 
-	if (strcmp(str, "") == 0 || str == NULL)
+	if (strcmp(str, "") == 0 || str == NULL || str[0] == ' ')
 	return (NULL);
 
 	d = counter(str);
