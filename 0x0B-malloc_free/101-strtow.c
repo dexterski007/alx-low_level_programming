@@ -51,7 +51,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, d = 0, f = 0;
 	int len = strlen(str);
 
-	if (strcmp(str, "") == 0 || str == NULL || (str[0] == ' ' && str[1] == '\0'))
+	if (strcmp(str, "") == 0 || str == NULL)
 	return (NULL);
 
 	d = counter(str);
@@ -71,10 +71,7 @@ char **strtow(char *str)
 		}
 			tab[d] = (char *)malloc(j + 1);
 			if (tab[d] == NULL)
-			{
-			free(tab[d]);
 			return (NULL);
-			}
 			for (f = 0; f < j; f++)
 			tab[d][f] = str[i - j + f];
 			tab[d][j] = '\0';
