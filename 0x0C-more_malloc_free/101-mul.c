@@ -87,13 +87,11 @@ int main(int argc, char **argv)
 	return (1);
 	for (i = 0; i < len; i++)
 	res[i] = 0;
-	res[i + 1] = '\0';
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 	num1 = s1[len1] - '0';
 	carry = 0;
-	len2 = strlent(s2);
-		for (len2 = len2  - 1; len2 >= 0; len2--)
+		for (len2 = strlent(s2)  - 1; len2 >= 0; len2--)
 		{
 			num2 = s2[len2] - '0';
 			carry += res[len1 + len2 + 1] + (num1 * num2);
