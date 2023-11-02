@@ -75,8 +75,8 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	ex98();
-        s1 = argv[1];
-        s2 = argv[2];
+	s1 = argv[1];
+	s2 = argv[2];
 	if (is_num(s1) == 0 || is_num(s2) == 0)
 	ex98();
 	len1 = strlent(s1);
