@@ -70,7 +70,7 @@ int is_num(char *str)
 int main(int argc, char **argv)
 
 {
-	int i, z = 0, num1, num2, *res, len, len1, len2, carry = 0;
+	int i = 0, z = 0, num1, num2, *res, len, len1, len2, carry = 0;
 	char *s1, *s2;
 
 	if (argc != 3)
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
 	len2 = strlent(s2);
 	len = len1 + len2 + 1;
 	res = malloc(sizeof(int) * len);
-	if (res == NULL)
+	if (!res)
 	return (1);
 	for (i = 0; i < len; i++)
 	res[i] = 0;
