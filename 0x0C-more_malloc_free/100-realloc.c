@@ -15,6 +15,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 {
 	void *tab;
+	unsigned int cpy_size;
 
 	if (new_size == old_size)
 	return (ptr);
@@ -32,7 +33,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (tab == NULL)
 	return (NULL);
 
-	memcpy(tab, ptr, new_size);
+	if (old_size < new size)
+	cpy_size = old size;
+	else
+	cpy_size = new_size;
+	memcpy(tab, ptr, cpy_size);
 	free(ptr);
 	return (tab);
 }
