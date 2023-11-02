@@ -70,7 +70,7 @@ int is_num(char *str)
 int main(int argc, char **argv)
 
 {
-	int i, z, num1, num2, *res, len, len1, len2, carry = 0;
+	int i, z = 0, num1, num2, *res, len, len1, len2, carry = 0;
 	char *s1, *s2;
 
 	if (argc != 3)
