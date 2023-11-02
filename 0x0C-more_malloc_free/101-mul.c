@@ -14,7 +14,7 @@ int _putchar(char c);
 int strlent(char *s)
 
 {
-	int i;
+	int i = 0;
 
 	while (s[i] != '\0')
 	i++;
@@ -70,7 +70,7 @@ int is_num(char *str)
 int main(int argc, char **argv)
 
 {
-	int i, j, z, num1, num2, *res, len, len1, len2, carry = 0;
+	int i, z, num1, num2, *res, len, len1, len2, carry = 0;
 	char *s1, *s2;
 
 	if (argc != 3)
@@ -88,25 +88,26 @@ int main(int argc, char **argv)
 	for (i = 0; i < len; i++)
 	res[i] = 0;
 	res[i + 1] = '\0';
-	for (i = len1 - 1; i >= 0; i--)
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-	num1 = s1[i] - '0';
+	num1 = s1[len1] - '0';
 	carry = 0;
-		for (j = len2 - 1; j >= 0; j--)
+	len2 = strlent(s2);
+		for (len2 = len2  - 1; len2 >= 0; len2--)
 		{
-			num2 = s2[j] - '0';
-			carry += res[i + j + 1] + (num1 * num2);
-			res[i + j + 1] = carry % 10;
+			num2 = s2[len2] - '0';
+			carry += res[len1 + len2 + 1] + (num1 * num2);
+			res[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
 		if (carry > 0)
-		res[i + j + 1] += carry;
+		res[len1 + len2 + 1] += carry;
 	}
 	for (i = 0; i < len - 1; i++)
 	{
 		if (res[i])
 		z = 1;
-		if (z == 1)
+		if (z)
 		_putchar(res[i] + '0');
 	}
 	if (!z)
