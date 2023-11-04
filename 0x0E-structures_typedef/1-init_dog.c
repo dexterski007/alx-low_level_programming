@@ -2,8 +2,7 @@
 #include "dog.h"
 
 /**
- *
- * init_dog - init a dog
+ * init_dog - init a dog its a descr
  *
  * @d: struct dog
  * @name: dogs name
