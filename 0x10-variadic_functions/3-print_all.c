@@ -36,8 +36,7 @@ void print_all(const char * const format, ...)
 				{
 				tab = va_arg(args, char *);
 				if (tab == NULL)
-				printf("%s(nil)", sep);
-				else
+				tab = "(nil)";
 				printf("%s%s", sep, tab);
 				}
 				break;
