@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_numbers - function to sum arguments
+ * print_strings - function to sum arguments
  *
  * @separator: separator
  * @n: arg number
