@@ -6,10 +6,8 @@ section .text
     extern printf
 
 main:
-    sub rsp, 8
-
-    mov rdi, hello
+    mov edi, hello
+    xor eax, eax
     call printf
-
-    add rsp, 8
+    mov eax, 0
     ret
