@@ -3,14 +3,14 @@
 /**
  * free_listint2 - free nodes
  *
- * @head: node
+ * @head: node pointer
  */
 
 void free_listint2(listint_t **head)
 {
 	listint_t *curr;
 
-	if (*head == NULL || head == NULL)
+	if (head == NULL)
 		return;
 
 	while (*head)
