@@ -4,6 +4,7 @@
  * get_nodeint_at_index - return node at index
  *
  * @head: node pointer
+ * @index: index of node
  *
  * Return: data of node
  */
