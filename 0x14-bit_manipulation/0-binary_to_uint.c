@@ -2,9 +2,9 @@
 
 /**
  * binary_to_uint - converter
- * 
+ *
  * @b: char
- * 
+ *
  * Return: converted number
  */
 
