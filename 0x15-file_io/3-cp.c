@@ -10,7 +10,7 @@ char *buffy(char *filename);
 /**
  * buffy - buffer
  *
- * @buff: buffer
+ * @filename: name
  *
  * Return: buffer
 */
@@ -31,7 +31,7 @@ char *buffy(char *filename)
 /**
  * cl - close file
  *
- * @buff: buffer
+ * @fln: file
 */
 
 void cl(int fln)
@@ -70,7 +70,7 @@ int main(int ac, char **av)
 	orig = open(av[1], O_RDONLY);
 	fre = read(orig, buffe, 1024);
 	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while(fre > 0)
+	while (fre > 0)
 	{
 		if (orig == -1 || fre == -1)
 		{
