@@ -288,7 +288,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Unable to read file %s\n", argv[1]);
 		exit(98);
 	}
-
 	validate_elf(header->e_ident);
 	printf("ELF Header:\n");
 	show_magic_numbers(header->e_ident);
@@ -299,9 +298,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	show_abi_version(header->e_ident);
 	show_file_type(header->e_type, header->e_ident);
 	show_entry_point(header->e_entry, header->e_ident);
-
 	free(header);
 	close_elf_file(fc);
-
 	return (0);
 }
