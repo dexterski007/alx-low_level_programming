@@ -70,8 +70,7 @@ int main(int ac, char **av)
 	orig = open(av[1], O_RDONLY);
 	fre = read(orig, buffe, 1024);
 	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while (fre > 0)
-	{
+	do	{
 		if (orig == -1 || fre == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -89,7 +88,7 @@ int main(int ac, char **av)
 		}
 		fre = read(orig, buffe, 1024);
 		dest = open(av[2], O_WRONLY | O_APPEND);
-	}
+	} while (fre > 0);
 	free(buffe);
 	cl(orig);
 	cl(dest);
