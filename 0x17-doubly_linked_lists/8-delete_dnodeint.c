@@ -3,7 +3,7 @@
 /**
  * delete_dnodeint_at_index - delete node list
  *
- * @h: head
+ * @head: head
  * @index: index
  *
  * Return: 1 or -1
@@ -25,7 +25,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
-	while(i < index && temp != NULL)
+	while (i < index && temp != NULL)
 	{
 		temp = temp->next;
 		i++;
@@ -37,7 +37,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp->next->prev = temp->prev;
 	if (temp->prev != NULL)
 		temp->prev->next = temp->next;
-	free (temp);
+	free(temp);
 
 	return (1);
 }
