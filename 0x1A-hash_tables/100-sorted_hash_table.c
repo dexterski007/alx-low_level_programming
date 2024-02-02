@@ -9,7 +9,6 @@
  */
 
 shash_table_t *shash_table_create(unsigned long int size)
-
 {
 	shash_table_t *new_table;
 	unsigned long int i;
@@ -54,7 +53,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->shead;
-	while(tmp)
+	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
@@ -164,14 +163,14 @@ void shash_table_print(const shash_table_t *ht)
 	printf("{");
 
 	while (node != NULL)
-		{
-			if (first == 1)
-				first = 0;
-			else
-				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			node = node->snext;
-		}
+	{
+		if (first == 1)
+			first = 0;
+		else
+			printf(", ");
+		printf("'%s': '%s'", node->key, node->value);
+		node = node->snext;
+	}
 	printf("}\n");
 }
 
@@ -220,13 +219,13 @@ void shash_table_delete(shash_table_t *ht)
 
 	node = ht->shead;
 	while (node)
-		{
-			tmp = node->snext;
-			free(node->key);
-			free(node->value);
-			free(node);
-			node = tmp;
-		}
+	{
+		tmp = node->snext;
+		free(node->key);
+		free(node->value);
+		free(node);
+		node = tmp;
+	}
 	free(ht->array);
 	free(ht);
 }
