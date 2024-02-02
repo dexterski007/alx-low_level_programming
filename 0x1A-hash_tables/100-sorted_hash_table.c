@@ -193,14 +193,14 @@ void shash_table_print_rev(const shash_table_t *ht)
 	node = ht->stail;
 	printf("{");
 	while (node != NULL)
-		{
-			if (first == 1)
-				first = 0;
-			else
-				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			node = node->sprev;
-		}
+	{
+		if (first == 1)
+			first = 0;
+		else
+			printf(", ");
+		printf("'%s': '%s'", node->key, node->value);
+		node = node->sprev;
+	}
 	printf("}\n");
 }
 
