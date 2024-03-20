@@ -1,4 +1,2 @@
-all: generate
-
-generate:
+all:
 	gcc *.h *.c -o school
