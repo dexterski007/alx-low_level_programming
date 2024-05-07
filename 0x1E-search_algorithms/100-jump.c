@@ -1,56 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "search_algos.h"
+#include <math.h>
 
 /**
- * binary_search_recursion - helper function for binary search
- *
- * @array: array to search in
- * @low: low side
- * @high: high side
- * @value: value to search for
- * @print: boolean to disable printing
- *
- * Return: first index where the value is located
- */
-
-int binary_search_recursion(
-	int *array,
-	size_t low,
-	size_t high,
-	int value,
-	int print
-	)
-{
-	size_t i, mid;
-
-	if (low > high)
-		return (-1);
-
-	mid = low + (high - low) / 2;
-
-	if (print)
-	{
-		printf("Searching in array: ");
-		for (i = low; i <= high; i++)
-		{
-			if (i != high)
-				printf("%d, ", array[i]);
-			else
-				printf("%d\n", array[i]);
-		}
-	}
-
-	if (value < array[mid])
-		return (binary_search_recursion(array, low, mid - 1, value, print));
-	else if (value > array[mid])
-		return (binary_search_recursion(array, mid + 1, high, value, print));
-	else
-		return (mid);
-}
-
-/**
- * binary_search - helper function for binary search
+ * jump_search - helper function for binary search
  *
  * @array: array to search in
  * @size: array size
@@ -59,10 +13,26 @@ int binary_search_recursion(
  * Return: first index where the value is located
  */
 
-int binary_search(int *array, size_t size, int value)
+int jump_search(int *array, size_t size, int value)
 {
+	size_t j = sqrt(size), left = 0, right = 0, i;
+
 	if (array == NULL)
 		return (-1);
 
-	return (binary_search_recursion(array, 0, size - 1, value, 1));
+	while (right < size && array[right] < value)
+	{
+		printf("Value checked array[%ld] = [%d]\n", right, array[right]);
+		left = right;
+		right += j;
+	}
+	printf("Value found between indexes [%ld] and [%ld]\n", left, right);
+
+	for (i = left; i <= right && i < size; i++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+			if (array[i] == value)
+				return (i);
+	}
+	return (-1);
 }
