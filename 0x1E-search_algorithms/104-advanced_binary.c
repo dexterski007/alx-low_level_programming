@@ -9,47 +9,47 @@
  * @low: low side
  * @high: high side
  * @value: value to search for
+ * @sz: original size
  *
  * Return: first index where the value is located
  */
 
-int advanced_binary_search_recursion(
-	int *array,
-	size_t low,
-	size_t high,
-	int value
-	)
+int advanced_binary_search_recursion(int *array, size_t size, int value)
 {
 	size_t i, mid;
 
-	if (low > high)
+	if (array == NULL || size == 0)
 		return (-1);
 
-	mid = low + (high - low) / 2;
+	mid = size / 2;
 
-	printf("Searching in array: ");
-	for (i = low; i <= high; i++)
+	printf("Searching in array");
+	for (i = 0; i < size; i++)
 	{
-		if (i != high)
-			printf("%d, ", array[i]);
+		if (i == 0)
+			printf(": %d", array[i]);
 		else
-			printf("%d\n", array[i]);
+			printf(", %d", array[i]);
 	}
+	printf("\n");
+
+	if (mid && size % 2 == 0)
+		mid--;
 
 	if (array[mid] == value)
 	{
-		if (mid == low || array[mid - 1] != value)
-			return (mid);
-		else
-			return (advanced_binary_search_recursion(array, low, mid, value));
+		if (mid > 0)
+			return (advanced_binary_search_recursion(
+					array, mid + 1, value));
+		return (mid);
 	}
 
 	if (value < array[mid])
 		return (advanced_binary_search_recursion(array,
-				low, mid - 1, value));
-	else
-		return (advanced_binary_search_recursion(array,
-				mid + 1, high, value));
+				mid + 1, value));
+	mid++;
+	return (advanced_binary_search_recursion(array + mid,
+			size - mid, value) + mid);
 }
 
 /**
@@ -66,10 +66,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int ind;
 
-	if (array == NULL)
-		return (-1);
-
-	ind = advanced_binary_search_recursion(array, 0, size - 1, value);
+	ind = advanced_binary_search_recursion(array, size, value);
 
 	if (ind >= 0 && array[ind] != value)
 		return (-1);
