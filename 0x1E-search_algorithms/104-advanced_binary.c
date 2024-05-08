@@ -6,10 +6,8 @@
  * advanced_binary_search_recursion - helper function for binary search
  *
  * @array: array to search in
- * @low: low side
- * @high: high side
+ * @size: size
  * @value: value to search for
- * @sz: original size
  *
  * Return: first index where the value is located
  */
