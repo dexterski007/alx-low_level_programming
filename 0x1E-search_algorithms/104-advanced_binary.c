@@ -9,7 +9,6 @@
  * @low: low side
  * @high: high side
  * @value: value to search for
- * @print: boolean to disable printing
  *
  * Return: first index where the value is located
  */
@@ -65,8 +64,14 @@ int advanced_binary_search_recursion(
 
 int advanced_binary(int *array, size_t size, int value)
 {
+	int ind;
+
 	if (array == NULL)
 		return (-1);
 
-	return (advanced_binary_search_recursion(array, 0, size - 1, value));
+	ind = advanced_binary_search_recursion(array, 0, size - 1, value);
+
+	if (ind >= 0 && array[ind] != value)
+		return (-1);
+	return (ind);
 }
